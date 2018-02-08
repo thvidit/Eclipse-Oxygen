@@ -1,0 +1,31 @@
+5
+3
+1
+2
+2
+4
+
+ static int longestSubsequence(String s) {
+        int i,j;
+        
+        char []={'a','e','i','o','u'};
+        int len=s.length();
+        char inputString[]=s.toCharArray();
+        int lSsMatrix[][]=new int[6][len+1]; 
+        
+        for(i=1;i<6;i++){
+            for(j=1;j<len+1;j++){
+                if(vowel[i-1]==inputString[j-1]){
+                    if(lSsMatrix[i-1][j]>=lSsMatrix[i][j-1]){
+                        lSsMatrix[i][j]=lSsMatrix[i-1][j]+1;
+                    }else if(lSsMatrix[i][j-1]>lSsMatrix[i-1][j]){
+                        lSsMatrix[i][j]=lSsMatrix[i][j-1]+1;
+                    }
+                }
+                else{
+                    lSsMatrix[i][j]=lSsMatrix[i][j-1];
+                }
+            }
+        }
+        return lSsMatrix[5][len];
+    }

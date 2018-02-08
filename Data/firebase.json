@@ -1,0 +1,184 @@
+    [
+		{
+                "airline": "American",
+                "id": 1,
+                "code": "ER38sd",
+                "origin": "CLE",
+                "destination": "SFO",
+                "departureDate": "Jul 26, 2017",
+                "price": 400,
+                "availableSeats": "0",
+                "plane": {
+                    "type": "Boeing 737",
+                    "totalSeats": "150"
+                }
+          	},
+		{
+                "airline": "American",
+                "id": 2,
+                "code": "ER39sd",
+                "origin": "LAX",
+                "destination": "PDX",
+                "departureDate": "Jul 27, 2017",
+                "price": 600,
+                "availableSeats": "115",
+                "plane": {
+                    "type": "Boeing 738",
+                    "totalSeats": "350"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 3,
+                "code": "ER40sd",
+                "origin": "LAX",
+                "destination": "CLE",
+                "departureDate": "Jul 28, 2017",
+                "price": 350,
+                "availableSeats": "12",
+                "plane": {
+                    "type": "Boeing 739",
+                    "totalSeats": "250"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 4,
+                "code": "ER40sd",
+                "origin": "SFO",
+                "destination": "LAX",
+                "departureDate": "Jul 29, 2017",
+                "price": 350,
+                "availableSeats": "12",
+                "plane": {
+                    "type": "Boeing 739",
+                    "totalSeats": "250"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 5,
+                "code": "ER38sd",
+                "origin": "MUA",
+                "destination": "SFO",
+                "departureDate": "Mar 20, 2016",
+                "price": 400,
+                "availableSeats": "0",
+                "plane": {
+                    "type": "Boeing 741",
+                    "totalSeats": "150"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 6,
+                "code": "ER38sd",
+                "origin": "MUA",
+                "destination": "SFO",
+                "departureDate": "Mar 20, 2016",
+                "price": 400,
+                "availableSeats": "0",
+                "plane": {
+                    "type": "Boeing 742",
+                    "totalSeats": "250"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 7,
+                "code": "ER38sd",
+                "origin": "MUA",
+                "destination": "SFO",
+                "departureDate": "Mar 20, 2016",
+                "price": 400,
+                "availableSeats": "0",
+                "plane": {
+                    "type": "Boeing 742",
+                    "totalSeats": "250"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 8,
+                "code": "ER38sd",
+                "origin": "MUA",
+                "destination": "SFO",
+                "departureDate": "Mar 20, 2016",
+                "price": 400,
+                "availableSeats": "0",
+                "plane": {
+                    "type": "Boeing 737",
+                    "totalSeats": "150"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 9,
+                "code": "ER38sd",
+                "origin": "MUA",
+                "destination": "SFO",
+                "departureDate": "Mar 20, 2016",
+                "price": 400,
+                "availableSeats": "0",
+                "plane": {
+                    "type": "Boeing 737",
+                    "totalSeats": "150"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 10,
+                "code": "ER38sd",
+                "origin": "MUA",
+                "destination": "SFO",
+                "departureDate": "Mar 20, 2016",
+                "price": 400,
+                "availableSeats": "0",
+                "plane": {
+                    "type": "Boeing 737",
+                    "totalSeats": "150"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 11,
+                "code": "ER38sd",
+                "origin": "MUA",
+                "destination": "SFO",
+                "departureDate": "Mar 20, 2016",
+                "price": 400,
+                "availableSeats": "0",
+                "plane": {
+                    "type": "Boeing 737",
+                    "totalSeats": "150"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 12,
+                "code": "ER41sd",
+                "origin": "MUA",
+                "destination": "SFO",
+                "departureDate": "Mar 20, 2016",
+                "price": 400,
+                "availableSeats": "0",
+                "plane": {
+                    "type": "Boeing 737",
+                    "totalSeats": "150"
+                }
+            },
+		 {
+                "airline": "American",
+                "id": 13,
+                "code": "ER42sd",
+                "origin": "MUA",
+                "destination": "SFO",
+                "departureDate": "Mar 20, 2016",
+                "price": 400,
+                "availableSeats": "0",
+                "plane": {
+                    "type": "Boeing 743",
+                    "totalSeats": "150"
+                }
+            }
+    ]

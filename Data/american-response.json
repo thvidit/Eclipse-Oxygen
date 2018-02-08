@@ -1,0 +1,36 @@
+{
+    "flights": [
+        {
+            "flight0": {
+                "airline": "American",
+                "id": 2,
+                "code": "ER39sd",
+                "origin": "LAX",
+                "destination": "PDX",
+                "departureDate": "Jul 27, 2017",
+                "price": 600,
+                "availableSeats": "115",
+                "plane": {
+                    "type": "Boeing 738",
+                    "totalSeats": "350"
+                }
+            }
+        },
+        {
+            "flight1": {
+                "airline": "American",
+                "id": 3,
+                "code": "ER40sd",
+                "origin": "LAX",
+                "destination": "CLE",
+                "departureDate": "Jul 28, 2017",
+                "price": 350,
+                "availableSeats": "12",
+                "plane": {
+                    "type": "Boeing 739",
+                    "totalSeats": "250"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+[
+	{
+		totalSeats: 350,
+		planeId: 2,
+		type: "Boeing 738"
+	},
+	{
+		totalSeats: 350,
+		planeId: 2,
+		type:"Boeing 738"
+	}
+]

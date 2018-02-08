@@ -1,0 +1,93 @@
+﻿CREATE TABLE EMPLOYEE (
+  ID int,
+  Designation varchar(255),
+  Reporting varchar(255)
+  ); #create employee
+
+CREATE TABLE PAYROLL (
+  Designation varchar(255),
+  Salary2016 varchar(255),
+  Salary2017 varchar(255)
+  ); #create payroll
+
+CREATE TABLE PDETAILS (
+  ID int,
+  Name varchar(255),
+  MaritalStatus varchar(255),
+  Address varchar(255)
+  ); #create personal details
+
+INSERT INTO EMPLOYEE (ID, Designation, Reporting)
+VALUES ('1','Engineer','Smruti');
+INSERT INTO EMPLOYEE (ID, Designation, Reporting)
+VALUES ('2','Manager','Smruti');
+INSERT INTO EMPLOYEE (ID, Designation, Reporting)
+VALUES ('3','Lead','Smruti');
+INSERT INTO EMPLOYEE (ID, Designation, Reporting)
+VALUES ('4','Caretaker','Smruti');
+INSERT INTO EMPLOYEE (ID, Designation, Reporting)
+VALUES ('5','Engineer','Smruti'); #add data to employee
+
+INSERT INTO PAYROLL (Designation, Salary2016, Salary2017)
+VALUES ('Engineer','20000','30000');
+INSERT INTO PAYROLL (Designation, Salary2016, Salary2017)
+VALUES ('Manager','30000','40000');
+INSERT INTO PAYROLL (Designation, Salary2016, Salary2017)
+VALUES ('Caretaker','10000','20000');
+INSERT INTO PAYROLL (Designation, Salary2016, Salary2017)
+VALUES ('Lead','40000','20000'); #add data to payroll
+
+INSERT INTO PDETAILS (ID, Name, MaritalStatus, Address)
+VALUES ('1', 'Vidit', 'Unmarried', 'Delhi');
+INSERT INTO PDETAILS (ID, Name, MaritalStatus, Address)
+VALUES ('2', 'Shubham', 'Unmarried', 'Pune');
+INSERT INTO PDETAILS (ID, Name, MaritalStatus, Address)
+VALUES ('3', 'Smruti', 'Married', 'Bangalore');
+INSERT INTO PDETAILS (ID, Name, MaritalStatus, Address)
+VALUES ('4', 'Gaurob', 'Married', 'Kolkata');
+INSERT INTO PDETAILS (ID, Name, MaritalStatus, Address)
+VALUES ('5', 'Ravi', 'Unmarried', 'Mathura'); #add data to personal details
+
+SELECT * FROM PDETAILS; #print pdetails
+
+SELECT * FROM EMPLOYEE order by ID; #print employee
+
+SELECT * FROM PAYROLL; #print payroll
+
+CREATE TABLE COMBINED1 AS SELECT EMPLOYEE.ID,EMPLOYEE.Designation,PAYROLL.Salary2016, PAYROLL.Salary2017 FROM EMPLOYEE INNER JOIN PAYROLL
+ON EMPLOYEE.Designation = PAYROLL.Designation;
+
+SELECT * FROM COMBINED1 ORDER BY ID; #Combined tables
+
+SELECT COMBINED1.ID,PDETAILS.Name,Designation,sum(salary2016+salary2017) AS Salary from COMBINED1 INNER JOIN PDETAILS ON COMBINED1.ID = PDETAILS.ID group by ID ORDER BY Salary desc;
+
+SELECT COMBINED1.ID,PDETAILS.Name,Designation,sum(salary2016+salary2017) AS Salary from COMBINED1 INNER JOIN PDETAILS ON COMBINED1.ID = PDETAILS.ID group by ID ORDER BY Salary desc LIMIT 1,1;
+
+SELECT COMBINED1.ID,PDETAILS.Name,PDETAILS.MaritalStatus,sum(salary2016+salary2017) + 5000 AS Salary from COMBINED1 INNER JOIN PDETAILS ON COMBINED1.ID = PDETAILS.ID WHERE PDETAILS.MaritalStatus='married' group by ID;
+
+delete FROM PAYROLL WHERE PAYROLL.DESIGNATION = 'Lead';
+
+select x.id,x.name,x.designation, (x.Salary) AS MaxSalary from
+(select E.ID, D.NAME, E.DESIGNATION,sum(P.SALARY2016 + P.SALARY2017) AS Salary
+from EMPLOYEE E INNER JOIN PAYROLL P ON E.DESIGNATION = P.DESIGNATION
+INNER JOIN PDETAILS D ON E.ID = D.ID GROUP BY id) as x; #salary combined with inner join of all 3 tables
+
+select x.id,x.name,x.designation, MAX(x.Salary) AS MaxSalary from(select E.ID, D.NAME, E.DESIGNATION,sum(P.SALARY2016 + P.SALARY2017) AS Salary
+from EMPLOYEE E INNER JOIN PAYROLL P ON E.DESIGNATION = P.DESIGNATION
+INNER JOIN PDETAILS D ON E.ID = D.ID GROUP BY id)
+as x WHERE x.salary < (select max(y.salary) from (select E.ID, D.NAME, E.DESIGNATION,sum(P.SALARY2016 + P.SALARY2017) AS Salary
+from EMPLOYEE E INNER JOIN PAYROLL P ON E.DESIGNATION = P.DESIGNATION
+INNER JOIN PDETAILS D ON E.ID = D.ID GROUP BY id)as y); #maxSalary Combined
+
+select E.ID, D.NAME, E.DESIGNATION,sum(P.SALARY2016 + P.SALARY2017) +5000 AS NewSalary
+from EMPLOYEE E
+INNER JOIN PAYROLL P
+ON E.DESIGNATION = P.DESIGNATION
+INNER JOIN PDETAILS D
+ON E.ID = D.ID
+where D.MaritalStatus='Married'
+group by ID; #add 5000 for married person
+
+select max(salary2016+salary2017) AS MaxSalary from payroll where salary2016+salary2017 < (select max(salary2016 + salary2017) from payroll); #maxsalary using select
+
+SELECT MAX(Salary2016+salary2017) as MaxSalary FROM payroll WHERE Salary2016+salary2017 NOT IN (SELECT MAX(Salary2016+salary2017) FROM payroll); #maxSalary using NOT IN

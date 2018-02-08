@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://java.football.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="MethodsInterfaceService" targetNamespace="http://java.football.com/">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://java.football.com/" elementFormDefault="unqualified" targetNamespace="http://java.football.com/" version="1.0">
+            <xs:element name="addMatch" type="tns:addMatch"/>
+            <xs:element name="addMatchResponse" type="tns:addMatchResponse"/>
+            <xs:element name="getAllMatches" type="tns:getAllMatches"/>
+            <xs:element name="getAllMatchesResponse" type="tns:getAllMatchesResponse"/>
+            <xs:element name="getMatches" type="tns:getMatches"/>
+            <xs:element name="getMatchesResponse" type="tns:getMatchesResponse"/>
+            <xs:complexType name="getAllMatches">
+                <xs:sequence/>
+            </xs:complexType>
+            <xs:complexType name="getAllMatchesResponse">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:match"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="match">
+                <xs:sequence>
+                    <xs:element name="match_id" type="xs:int"/>
+                    <xs:element name="fGoals" type="xs:int"/>
+                    <xs:element minOccurs="0" name="fTeam" type="xs:string"/>
+                    <xs:element name="sGoals" type="xs:int"/>
+                    <xs:element minOccurs="0" name="sTeam" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="getMatches">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="getMatchesResponse">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:match"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="addMatch">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="tns:match"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="addMatchResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="tns:match"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="getAllMatches">
+        <wsdl:part element="tns:getAllMatches" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getMatches">
+        <wsdl:part element="tns:getMatches" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getMatchesResponse">
+        <wsdl:part element="tns:getMatchesResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="addMatch">
+        <wsdl:part element="tns:addMatch" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getAllMatchesResponse">
+        <wsdl:part element="tns:getAllMatchesResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="addMatchResponse">
+        <wsdl:part element="tns:addMatchResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="MethodsInterface">
+        <wsdl:operation name="getAllMatches">
+            <wsdl:input message="tns:getAllMatches" name="getAllMatches">
+    </wsdl:input>
+            <wsdl:output message="tns:getAllMatchesResponse" name="getAllMatchesResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMatches">
+            <wsdl:input message="tns:getMatches" name="getMatches">
+    </wsdl:input>
+            <wsdl:output message="tns:getMatchesResponse" name="getMatchesResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addMatch">
+            <wsdl:input message="tns:addMatch" name="addMatch">
+    </wsdl:input>
+            <wsdl:output message="tns:addMatchResponse" name="addMatchResponse">
+    </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="MethodsInterfaceServiceSoapBinding" type="tns:MethodsInterface">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getAllMatches">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getAllMatches">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getAllMatchesResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMatches">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getMatches">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getMatchesResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addMatch">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="addMatch">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="addMatchResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="MethodsInterfaceService">
+        <wsdl:port binding="tns:MethodsInterfaceServiceSoapBinding" name="MethodsInterfacePort">
+            <soap:address location="http://localhost:7171/soap"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
