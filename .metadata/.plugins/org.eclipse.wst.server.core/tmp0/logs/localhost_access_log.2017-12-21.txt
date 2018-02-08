@@ -1,0 +1,9 @@
+127.0.0.1 - - [21/Dec/2017:08:19:43 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [21/Dec/2017:08:21:19 +0530] "GET /OrchardWebSpring/ HTTP/1.1" 404 1028
+127.0.0.1 - - [21/Dec/2017:08:22:21 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [21/Dec/2017:08:22:21 +0530] "GET /OrchardWebSpring/ HTTP/1.1" 404 1028
+0:0:0:0:0:0:0:1 - - [21/Dec/2017:08:22:36 +0530] "GET /OrchardWebSpring/rest/getallcampusminds HTTP/1.1" 200 9460
+0:0:0:0:0:0:0:1 - - [21/Dec/2017:08:23:16 +0530] "GET /OrchardWebSpring/rest/addlead? HTTP/1.1" 200 6769
+0:0:0:0:0:0:0:1 - - [21/Dec/2017:08:23:17 +0530] "GET /OrchardWebSpring/rest/getallcampusminds? HTTP/1.1" 200 9460
+0:0:0:0:0:0:0:1 - - [21/Dec/2017:08:23:21 +0530] "GET /OrchardWebSpring/rest/gettracks HTTP/1.1" 200 7808
+0:0:0:0:0:0:0:1 - - [21/Dec/2017:08:23:24 +0530] "GET /OrchardWebSpring/rest/getallcampusminds HTTP/1.1" 200 9460

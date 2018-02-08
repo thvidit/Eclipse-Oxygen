@@ -1,0 +1,17 @@
+package com.springboot.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.springboot.models.Team;
+
+@Service
+public interface TeamService {
+	
+	List<Team> getTeams();
+	
+	Team addTeam(Team team);
+	
+
+}

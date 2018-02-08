@@ -1,0 +1,14 @@
+server.port=2016
+server.contextPath=/api
+
+#Database related properties
+database.driverClass=com.mysql.jdbc.Driver
+database.url=jdbc:mysql://localhost:3306/cricke
+database.username=root
+database.password=Welcome123
+
+#Hibernate related properties
+hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+hibernate.hbm2ddl.auto=update
+hibernate.show_sql=true
+hibernate.format_sql=true

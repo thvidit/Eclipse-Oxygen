@@ -1,0 +1,18 @@
+package com.springboot.service;
+
+import java.util.List;
+
+import com.springboot.models.Player;
+import com.springboot.models.Team;
+
+public interface PlayerService {
+	
+	List<Player> getPlayers(int teamId);
+	
+	Team getTeamPlayer(int playerNumber);
+	
+	Player addPlayer(Player player);
+	
+	
+
+}

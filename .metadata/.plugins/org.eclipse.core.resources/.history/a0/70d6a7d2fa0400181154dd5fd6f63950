@@ -1,0 +1,50 @@
+package com.springboot.models;
+
+import java.util.List;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Teams")
+public class Team {
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "team_id")
+	int teamId;
+	
+	@Column(name = "team_name")
+	String teamName;
+	
+	List<Player> players;
+
+	public Team() {}
+	
+	public int getTeamId() {
+		return teamId;
+	}
+
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
+	}
+
+	public String getTeamName() {
+		return teamName;
+	}
+
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
+	}
+
+	public List<Player> getPlayers() {
+		return players;
+	}
+
+	public void setPlayers(List<Player> players) {
+		this.players = players;
+	}
+	
+	
+	
+
+}

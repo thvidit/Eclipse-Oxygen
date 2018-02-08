@@ -1,0 +1,54 @@
+package com.springboot.dao;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.springframework.stereotype.Repository;
+
+import com.springboot.models.Team;
+import com.springboot.util.HibernateUtil;
+
+@Repository
+public class TeamDaoImpl implements TeamDao {
+	
+	public TeamDaoImpl() {}
+	
+	HibernateUtil hibernateUtil = new HibernateUtil();
+
+	
+	@Override
+	public List<Team> getTeams() {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		try {
+			session.beginTransaction();
+			Criteria cri = session.createCriteria(Team.class);
+			@SuppressWarnings("unchecked")
+			List<Team> teams = cri.list();
+			return teams;
+		}catch(HibernateException e) {
+			session.close();
+			return null;
+		}
+		
+	}
+
+	@Override
+	public Team addTeam(Team team) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = null;
+		try {
+			transaction = session.beginTransaction();
+			session.save(team);
+			transaction.commit();
+			return team;
+		}catch(HibernateException e) {
+			transaction.rollback();
+			session.close();
+			return null;
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+127.0.0.1 - - [19/Jan/2018:12:00:50 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:00:51 +0530] "GET /RestWebServiceFootballDatabase/ HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:01:07 +0530] "GET /RestWebServiceFootballDatabase/rest/getallmatches HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:01:56 +0530] "GET /RestWebServiceFootballDatabase/ HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:02:09 +0530] "GET /RestWebServiceFootballDatabase/rest/WebService/getallmathces HTTP/1.1" 302 -
+127.0.0.1 - - [19/Jan/2018:12:03:31 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:03:32 +0530] "GET /SecureWebServiceJava/ HTTP/1.1" 404 1036
+127.0.0.1 - - [19/Jan/2018:12:08:19 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:08:19 +0530] "GET /SecureWs/ HTTP/1.1" 404 1012
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:08:36 +0530] "GET /SecureWs/rest/WebService/getallmatches HTTP/1.1" 401 -
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:09:25 +0530] "GET /RestWebServiceFootballDatabase/rest/WebService/getallmatches HTTP/1.1" 404 1114
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:09:33 +0530] "GET /RestWebServiceFootballDatabase/rest/WebService/getallmatches HTTP/1.1" 404 1114
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:09:51 +0530] "GET /SecureWs/rest/WebService/getallmatches HTTP/1.1" 200 1214
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:12:09:56 +0530] "GET /SecureWs/rest/WebService/getallmatches HTTP/1.1" 401 -

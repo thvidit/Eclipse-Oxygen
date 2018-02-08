@@ -1,0 +1,50 @@
+package com.springboot.dao;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.springboot.models.Player;
+import com.springboot.util.HibernateUtil;
+
+public class PlayerDaoImpl implements PlayerDao{
+	
+	HibernateUtil hibernateUtil = new HibernateUtil();
+
+	@Override
+	public List<Player> getPlayers(String teamName) {
+		Transaction transaction = null;
+		try {
+			Session session = HibernateUtil.getSessionFactory().openSession();
+			transaction = session.beginTransaction();
+			Criteria cr = session.createCriteria(Player.class);
+			@SuppressWarnings("unchecked")
+			List<Player> players = cr.list();
+			session.close();
+			return players;
+		}catch(HibernateException e) {
+			transaction.rollback();
+			return null;
+		}
+	}
+
+	@Override
+	public Player addPlayer(Player player) {
+		Transaction transaction = null;
+		try {
+			Session session = HibernateUtil.getSessionFactory().openSession();
+			transaction = session.beginTransaction();
+			session.save(player);
+			transaction.commit();
+			return player;
+		}catch(HibernateException e) {
+			transaction.rollback();
+			return null;
+		}
+	}
+	
+
+}

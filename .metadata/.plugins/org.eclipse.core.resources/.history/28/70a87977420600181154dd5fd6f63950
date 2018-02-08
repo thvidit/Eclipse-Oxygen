@@ -1,0 +1,15 @@
+package com.springboot.dao;
+
+import java.util.List;
+
+import com.springboot.models.Team;
+
+public interface TeamDao {
+	
+	String getTeamById(int teamId);
+	
+	List<Team> getTeams();
+	
+	Team addTeam(Team team);
+	
+}

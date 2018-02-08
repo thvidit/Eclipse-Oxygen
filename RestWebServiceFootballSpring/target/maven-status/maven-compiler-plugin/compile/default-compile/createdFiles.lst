@@ -1,0 +1,6 @@
+com\football\controller\MatchController.class
+com\football\dao\MatchDaoImplementation.class
+com\football\service\MatchServiceImplementation.class
+com\football\service\MatchService.class
+com\football\dao\MatchDao.class
+com\football\bean\Match.class

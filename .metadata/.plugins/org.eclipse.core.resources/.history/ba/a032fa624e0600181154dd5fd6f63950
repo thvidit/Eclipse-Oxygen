@@ -1,0 +1,29 @@
+package com.springboot.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springboot.dao.TeamDao;
+import com.springboot.models.Team;
+
+@Service
+public class TeamServiceImpl implements TeamService{
+	
+	public TeamServiceImpl() {}
+	
+	@Autowired
+	TeamDao teamDao;
+
+	@Override
+	public List<Team> getTeams() {
+		return teamDao.getTeams();
+	}
+
+	@Override
+	public Team addTeam(Team team) {
+		return teamDao.addTeam(team);
+	}
+
+}

@@ -1,0 +1,5 @@
+127.0.0.1 - - [08/Jan/2018:12:47:22 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [08/Jan/2018:12:47:24 +0530] "GET /OrchardWebSpring/ HTTP/1.1" 404 1028
+0:0:0:0:0:0:0:1 - - [08/Jan/2018:12:48:07 +0530] "GET /OrchardWebSpring/rest/gettracks HTTP/1.1" 200 8461
+0:0:0:0:0:0:0:1 - - [08/Jan/2018:12:48:18 +0530] "GET /OrchardWebSpring/rest/getallcampusminds HTTP/1.1" 200 14602
+0:0:0:0:0:0:0:1 - - [08/Jan/2018:12:48:19 +0530] "GET /favicon.ico HTTP/1.1" 404 1016

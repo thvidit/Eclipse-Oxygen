@@ -1,0 +1,21 @@
+package com.springboot.service;
+
+import java.util.List;
+
+import com.springboot.models.Player;
+
+public class PlayerServiceImpl implements PlayerService{
+
+	@Override
+	public List<Player> getPlayers(String teamName) {
+		
+		return null;
+	}
+
+	@Override
+	public Player addPlayer(Player player) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

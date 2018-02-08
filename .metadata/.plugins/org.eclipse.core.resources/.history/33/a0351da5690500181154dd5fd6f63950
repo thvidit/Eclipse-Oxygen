@@ -1,0 +1,17 @@
+package com.springboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
+
+import com.springboot.controller.PlayerController;
+
+@SpringBootApplication
+@ComponentScan({"com.springboot.controller","com.springboot.service","com.springboot.dao"})
+public class AppApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AppApplication.class, args);
+	}
+}

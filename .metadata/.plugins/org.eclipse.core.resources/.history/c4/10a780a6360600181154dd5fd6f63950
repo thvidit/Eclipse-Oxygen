@@ -1,0 +1,29 @@
+package service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springboot.dao.PlayerDao;
+import com.springboot.models.Player;
+
+@Service
+public class PlayerServiceImpl implements PlayerService{
+	
+	public PlayerServiceImpl() {}
+	
+	@Autowired
+	private PlayerDao playerDao;
+	
+	@Override
+	public List<Player> getPlayers(String teamName) {
+		return playerDao.getPlayers(teamName);
+	}
+
+	@Override
+	public Player addPlayer(Player player) {
+		return playerDao.addPlayer(player);
+	}
+
+}

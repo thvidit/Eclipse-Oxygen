@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:48:18 +0530] "GET /OrchardWebSpring/ HTTP/1.1" 404 1028
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:48:46 +0530] "GET /OrchardWebSpring/rest/getallcampusminds HTTP/1.1" 200 9460
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:48:56 +0530] "GET /OrchardWebSpring/rest/getallcampusminds HTTP/1.1" 200 9460
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:48:56 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:49:22 +0530] "GET /OrchardWebSpring/rest/getcampusminds?id=12 HTTP/1.1" 200 4949
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:49:29 +0530] "GET /OrchardWebSpring/rest/addcampusmind? HTTP/1.1" 200 6412
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:49:41 +0530] "GET /OrchardWebSpring/rest/addtrack? HTTP/1.1" 200 4986
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:49:51 +0530] "GET /OrchardWebSpring/rest/addlead? HTTP/1.1" 200 6769
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:50:13 +0530] "GET /OrchardWebSpring/rest/getallcampusminds? HTTP/1.1" 200 9460
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:50:36 +0530] "GET /OrchardWebSpring/rest/gettracks HTTP/1.1" 200 8461
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:50:39 +0530] "GET /OrchardWebSpring/rest/getallleads HTTP/1.1" 200 8180
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:50:42 +0530] "GET /OrchardWebSpring/rest/getallcampusminds HTTP/1.1" 200 9460
+0:0:0:0:0:0:0:1 - - [26/Dec/2017:18:52:29 +0530] "GET /favicon.ico HTTP/1.1" 404 1016

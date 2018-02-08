@@ -1,0 +1,80 @@
+package com.springboot.models;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Players")
+public class Player {
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "player_no")
+	int playerNumber;
+	
+	@Column(name = "player_name")
+	String playerName;
+	
+	@Column(name="player_category")
+	String playerCategory;
+	
+	@Column(name="player_hs")
+	int playerHs;
+	
+	@Column(name="player_best_figure")
+	String playerBestFigure;
+	
+	@ManyToOne
+	@JoinColumn(name="team_id")
+	Team team;
+	
+	public Player() {}
+
+	public int getPlayerNumber() {
+		return playerNumber;
+	}
+
+	public void setPlayerNumber(int playerNumber) {
+		this.playerNumber = playerNumber;
+	}
+
+	public String getPlayerName() {
+		return playerName;
+	}
+
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+
+	public String getPlayerCategory() {
+		return playerCategory;
+	}
+
+	public void setPlayerCategory(String playerCategory) {
+		this.playerCategory = playerCategory;
+	}
+
+	public int getPlayerHs() {
+		return playerHs;
+	}
+
+	public void setPlayerHs(int playerHs) {
+		this.playerHs = playerHs;
+	}
+
+	public String getPlayerBestFigure() {
+		return playerBestFigure;
+	}
+
+	public void setPlayerBestFigure(String playerBestFigure) {
+		this.playerBestFigure = playerBestFigure;
+	}
+
+	public Team getTeam() {
+		return team;
+	}
+
+	public void setTeam(Team team) {
+		this.team = team;
+	}
+
+}

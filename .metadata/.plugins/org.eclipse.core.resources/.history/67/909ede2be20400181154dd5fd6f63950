@@ -1,0 +1,32 @@
+package com.springboot.dao;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+
+import com.springboot.models.Player;
+import com.springboot.util.HibernateUtil;
+
+public class PlayerDaoImpl implements PlayerDao{
+	
+	HibernateUtil hibernateUtil = new HibernateUtil();
+
+	@Override
+	public List<Player> getPlayers(String teamName) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		session.beginTransaction();
+		Criteria cr = session.createCriteria(Player.class);
+		List<Player> players = cr.list();
+		
+		return players;
+	}
+
+	@Override
+	public Player addPlayer(Player player) {
+		
+		return null;
+	}
+	
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.football.consume&apos; to &apos;ConsumeApis/src&apos;&#x0D;&#x0A;- Original project: &apos;RestWebServiceFootballDatabase&apos;&#x0D;&#x0A;- Destination element: &apos;ConsumeApis/src&apos;&#x0D;&#x0A;- Original element: &apos;RestWebServiceFootballDatabase/src/com.football.consume&apos;" description="Copy package" destination="=ConsumeApis/src" element1="/src&lt;com.football.consume" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1513657681697" version="1.0"/>
+</session>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/company" elementFormDefault="qualified" targetNamespace="http://www.example.org/company">
+
+	<xs:simpleType name="EmployeeId">
+		<xs:restriction base="xs:string">
+			<xs:length value="7"/>
+			<xs:pattern value="E[0-9]{7}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="EmployeeTitle">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Manager"/>
+			<xs:enumeration value="C1 Engineer"/>
+			<xs:enumeration value="C2 Engineer"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="EmployeeInfo">
+		<xs:sequence>
+			<xs:element name="eid" nillable="false" type="tns:EmployeeId"/>
+			<xs:element name="firstName" nillable="false" type="xs:string"/>
+			<xs:element name="lastName" nillable="false" type="xs:string"/>
+			<xs:element name="title" nillable="false" type="tns:EmployeeTitle"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="EmployeeInfoWrapper">
+		<xs:sequence>
+			<xs:element name="EmployeeInfo" nillable="false" type="tns:EmployeeInfo"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="EmployeeIdWrapper">
+		<xs:sequence>
+			<xs:element name="eid" nillable="false" type="tns:EmployeeId"/>	
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="EmployeeIdList" type="tns:EmployeeIdWrapper"/>
+	<xs:element name="EmployeeInfoList" type="tns:EmployeeInfoWrapper"/>
+	
+</xs:schema>

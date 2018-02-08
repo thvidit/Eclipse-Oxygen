@@ -1,0 +1,14 @@
+package com.springboot.dao;
+
+import java.util.List;
+
+import com.springboot.models.Player;
+
+public interface PlayerDao{
+	
+	List<Player> getPlayers(int teamId);
+	
+	Player addPlayer(Player player);
+	
+
+}
