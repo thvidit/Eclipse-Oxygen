@@ -1,0 +1,41 @@
+-trinagle or not
+-merge strings
+can you sort
+-jumping jak
+-puzzle
+-prime or not
+-sum them all
+-cupcake feast
+-number compliment
+largest number of orders
+
+//
+
+    public static int smallestFactor(int num){
+    int factor=0;
+    for(int i=2; i < num/2; i++) {  
+      if((num%i) == 0) { 
+        factor = i; 
+        break; 
+      } 
+    }  
+    return factor;
+    }
+
+    static int isPrime(long n) {
+         int returnVal=0;
+         int m = (int) n;
+        if (n%2==0) {
+            returnVal = smallestFactor(m);
+        }
+ 
+    for(int i=3;i*i<=n;i+=2) {
+        if(n%i==0){
+            returnVal = smallestFactor(m);
+    }else{
+        returnVal = 1;
+    }
+    }
+        return returnVal;
+    }
+        
